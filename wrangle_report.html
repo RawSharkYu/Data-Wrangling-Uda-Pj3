@@ -11788,15 +11788,13 @@ Also, in this step, I found some entries are errors, because these tweets with s
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>I assess these 3 dataframe visually and programmatically .</p>
 <p>Quality Issues:</p>
-<p>1.The types of "tweet_id" is  int in twitter-archive-enhanced table.</p>
-<p>2.The types of "tweet_id" is  int in image_predictions table.</p>
-<p>3.The types of "tweet_id" is  int in favorites-retweets-count table.</p>
+<p>1.The types of "tweet_id" is  int in twitter-archive-enhanced table, we should turn it into string.</p>
+<p>2.The types of "tweet_id" is  int in image_predictions table, we should turn it into string.</p>
+<p>3.The types of "tweet_id" is  int in favorites-retweets-count table, we should turn it into string.</p>
 <p>4.As I mentioned before, there are some tweets with specific tweet_id cannot be found.</p>
 <p>5.Most "None" values are not considered as None, but as object with string "None".</p>
-<p>6.The types of "in_reply_to_status_id", "in_reply_to_user_id", "retweeted_status_id" and "retweeted_status_user_id" are float64. These 4 id columns should also be changed into string.</p>
-<p>7.The type of "doggo", "floofer", "pupper" and "puppo" are object, values are names, not boolean value.</p>
-<p>8.The end of values of "timestamp" and "retweeted_status_timestamp" columns is "+0000", meaningless.</p>
-<p>9.The type of "timestamp" and "retweeted_status_timestamp" is "object", should be datetime.</p>
+<p>6.The end of values of "timestamp" and "retweeted_status_timestamp" columns is "+0000", meaningless.</p>
+<p>7.The type of "timestamp" and "retweeted_status_timestamp" is "object", should be datetime.</p>
 
 </div>
 </div>
@@ -11809,6 +11807,8 @@ Also, in this step, I found some entries are errors, because these tweets with s
 <p>Tidiness Issues:</p>
 <p>1.The source column is unreadable for human, but in fact there are only 4 sources:"Twitter for iPhone","Vine - Make a Scene","Twitter Web Client","TweetDeck".</p>
 <p>2.The twitter-archive-enhanced table, df_image and df_count table should be merged.</p>
+<p>3.The columns of "in_reply_to_status_id", "in_reply_to_user_id", "retweeted_status_id" and "retweeted_status_user_id" are not needed at all.</p>
+<p>4.Dog stage columns:"doggo","floofer","pupper","puppo" could be one column as "dog_stage" with value as these names.</p>
 
 </div>
 </div>
