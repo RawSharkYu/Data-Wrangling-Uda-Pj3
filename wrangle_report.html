@@ -11788,13 +11788,14 @@ Also, in this step, I found some entries are errors, because these tweets with s
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>I assess these 3 dataframe visually and programmatically .</p>
 <p>Quality Issues:</p>
-<p>1.The types of "tweet_id" is  int in twitter-archive-enhanced table, we should turn it into string.</p>
-<p>2.The types of "tweet_id" is  int in image_predictions table, we should turn it into string.</p>
-<p>3.The types of "tweet_id" is  int in favorites-retweets-count table, we should turn it into string.</p>
-<p>4.As I mentioned before, there are some tweets with specific tweet_id cannot be found.</p>
-<p>5.Most "None" values are not considered as None, but as object with string "None".</p>
-<p>6.The end of values of "timestamp" and "retweeted_status_timestamp" columns is "+0000", meaningless.</p>
-<p>7.The type of "timestamp" and "retweeted_status_timestamp" is "object", should be datetime.</p>
+<p>1.In the "name" column, there are some error names.</p>
+<p>2.The types of "tweet_id" is  int in twitter-archive-enhanced table, we should turn it into string.</p>
+<p>3.The types of "tweet_id" is  int in image_predictions table, we should turn it into string.</p>
+<p>4.The types of "tweet_id" is  int in favorites-retweets-count table, we should turn it into string.</p>
+<p>5.As I mentioned before, there are some tweets with specific tweet_id cannot be found.</p>
+<p>6.Most "None" values are not considered as None, but as object with string "None".</p>
+<p>7.The end of values of "timestamp" and "retweeted_status_timestamp" columns is "+0000", meaningless.</p>
+<p>8.The type of "timestamp" and "retweeted_status_timestamp" is "object", should be datetime.</p>
 
 </div>
 </div>
