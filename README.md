@@ -1,5 +1,5 @@
 # Uda-Proj3-Data-Wrangling
-This is for the project 3 of udacity, mainly about data wrangling.
+This is the project 3 of udacity, mainly about using Python to data wrangle.
 
 Using Python and Jupyter notebook to do the data wrangling.
 
